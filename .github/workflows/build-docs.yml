@@ -42,3 +42,18 @@ jobs:
         with:
           name: graduation-project-pdf
           path: build/latex/*.pdf
+
+      - name: Commit PDF to docs-pdf branch
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "actions@github.com"
+
+          git checkout --orphan docs-pdf
+          git rm -rf .
+          mkdir pdf
+          cp build/latex/*.pdf pdf/
+
+          git add pdf
+          git commit -m "Update generated PDF"
+          git push -f origin docs-pdf
+
