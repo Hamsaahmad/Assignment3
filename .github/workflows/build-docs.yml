@@ -1,0 +1,35 @@
+name: Build Docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          pip install sphinx recommonmark
+
+      - name: Build PDF
+        run: |
+          sphinx-build -b latex docs build/latex
+          cd build/latex
+          make
+
+      - name: Upload PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: graduation-project-pdf
+          path: build/latex/*.pdf
