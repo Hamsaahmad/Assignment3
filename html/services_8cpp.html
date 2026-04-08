@@ -102,7 +102,6 @@ Macros</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae8cc8d525b60b319f53b342153757cd0" id="r_ae8cc8d525b60b319f53b342153757cd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="services_8cpp.html#ae8cc8d525b60b319f53b342153757cd0">startVM</a> (VM_Id_t vmId)</td></tr>
-<tr class="memdesc:ae8cc8d525b60b319f53b342153757cd0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Starts execution of a VM selected by the scheduler.  <br /></td></tr>
 <tr class="separator:ae8cc8d525b60b319f53b342153757cd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59180dafd95bfe9f0c15f2ab5c5f1f4e" id="r_a59180dafd95bfe9f0c15f2ab5c5f1f4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="services_8cpp.html#a59180dafd95bfe9f0c15f2ab5c5f1f4e">stopVM</a> (VM_Id_t vmId)</td></tr>
 <tr class="memdesc:a59180dafd95bfe9f0c15f2ab5c5f1f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stops a virtual machine.  <br /></td></tr>
@@ -252,16 +251,6 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Starts execution of a VM selected by the scheduler. </p>
-<p>This function is called after the scheduler selects a VM that is in READY state. It updates the currently running VM in the hypervisor control block and performs the low-level context switch to transfer execution to that VM.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">vmId</td><td>Virtual machine ID </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if the VM was started successfully, false otherwise </dd></dl>
 
 </div>
 </div>
