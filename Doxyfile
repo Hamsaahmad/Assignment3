@@ -1,0 +1,36 @@
+# --- Project Information ---
+PROJECT_NAME           = "VM Management Services"
+PROJECT_NUMBER         = "1.0.0"
+OUTPUT_DIRECTORY       = docs
+CREATE_SUBDIRS         = NO
+OUTPUT_LANGUAGE        = English
+
+# --- Input Configuration ---
+# This ensures Doxygen looks at your .cpp and .h files
+INPUT                  = . services.cpp services.h
+FILE_PATTERNS          = *.cpp *.h *.hpp
+RECURSIVE              = YES
+EXCLUDE                = .github
+
+# --- Extraction Settings ---
+# Extracts all symbols, even if they aren't documented
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = YES
+EXTRACT_STATIC         = YES
+
+# --- LaTeX / PDF Configuration (CRITICAL for your Workflow) ---
+GENERATE_LATEX         = YES
+LATEX_OUTPUT           = latex
+LATEX_BATCHMODE        = YES
+# This allows the GitHub Action to run 'make' to produce the PDF
+USE_PDFLATEX           = YES
+PDF_HYPERLINKS         = YES
+
+# --- HTML Configuration ---
+GENERATE_HTML          = YES
+HTML_OUTPUT            = html
+
+# --- Diagram Configuration (Optional: requires 'graphviz' in workflow) ---
+HAVE_DOT               = YES
+CALL_GRAPH             = YES
+CALLER_GRAPH           = YES
