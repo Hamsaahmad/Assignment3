@@ -7,9 +7,9 @@ OUTPUT_LANGUAGE        = English
 
 # --- Input Configuration ---
 # This ensures Doxygen looks at your .cpp and .h files
-INPUT                  = . services.cpp services.h
-FILE_PATTERNS          = *.cpp *.h *.hpp
-RECURSIVE              = YES
+INPUT                  = services.cpp
+FILE_PATTERNS          = *.cpp
+RECURSIVE              = NO
 EXCLUDE                = .github
 
 # --- Extraction Settings ---
