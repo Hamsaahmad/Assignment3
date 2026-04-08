@@ -1,0 +1,51 @@
+\begin{theindex}
+
+  \item {20p1874\_hamsa\_main.cpp}, \hyperpage{3}
+    \subitem {sum}, \hyperpage{3}
+
+  \indexspace
+
+  \item {bool}
+    \subitem {services.cpp}, \hyperpage{4}
+
+  \indexspace
+
+  \item {false}
+    \subitem {services.cpp}, \hyperpage{4}
+
+  \indexspace
+
+  \item {getCurrentVMID}
+    \subitem {services.cpp}, \hyperpage{5}
+  \item {getVMStatus}
+    \subitem {services.cpp}, \hyperpage{5}
+
+  \indexspace
+
+  \item {resetVM}
+    \subitem {services.cpp}, \hyperpage{5}
+
+  \indexspace
+
+  \item {services.cpp}, \hyperpage{4}
+    \subitem {bool}, \hyperpage{4}
+    \subitem {false}, \hyperpage{4}
+    \subitem {getCurrentVMID}, \hyperpage{5}
+    \subitem {getVMStatus}, \hyperpage{5}
+    \subitem {resetVM}, \hyperpage{5}
+    \subitem {startVM}, \hyperpage{6}
+    \subitem {stopVM}, \hyperpage{6}
+    \subitem {true}, \hyperpage{4}
+  \item {startVM}
+    \subitem {services.cpp}, \hyperpage{6}
+  \item {stopVM}
+    \subitem {services.cpp}, \hyperpage{6}
+  \item {sum}
+    \subitem {20p1874\_hamsa\_main.cpp}, \hyperpage{3}
+
+  \indexspace
+
+  \item {true}
+    \subitem {services.cpp}, \hyperpage{4}
+
+\end{theindex}

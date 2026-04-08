@@ -1,0 +1,149 @@
+\doxysection{services.\+cpp File Reference}
+\hypertarget{services_8cpp}{}\label{services_8cpp}\index{services.cpp@{services.cpp}}
+{\ttfamily \#include "{}services.\+h"{}}\newline
+{\ttfamily \#include "{}hypervisor\+\_\+stubs.\+h"{}}\newline
+Include dependency graph for services.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=274pt]{services_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{services_8cpp_a65e9886d74aaee76545e83dd09011727}{false}}~0
+\item 
+\#define \mbox{\hyperlink{services_8cpp_a41f9c5fb8b08eb5dc3edce4dcb37fee7}{true}}~1
+\item 
+\#define \mbox{\hyperlink{services_8cpp_abb452686968e48b67397da5f97445f5b}{bool}}~int
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{services_8cpp_ae8cc8d525b60b319f53b342153757cd0}{start\+VM}} (VM\+\_\+\+Id\+\_\+t vm\+Id)
+\begin{DoxyCompactList}\small\item\em Starts execution of a VM selected by the scheduler. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{services_8cpp_a59180dafd95bfe9f0c15f2ab5c5f1f4e}{stop\+VM}} (VM\+\_\+\+Id\+\_\+t vm\+Id)
+\begin{DoxyCompactList}\small\item\em Stops a virtual machine. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{services_8cpp_a40e566a02605858e48a7a9f67fdea395}{reset\+VM}} (VM\+\_\+\+Id\+\_\+t vm\+Id)
+\begin{DoxyCompactList}\small\item\em Resets a virtual machine. \end{DoxyCompactList}\item 
+Vcore\+State\+Type \mbox{\hyperlink{services_8cpp_a861f2518676e6e5ad2e3ba5b01a01b68}{get\+VMStatus}} (VM\+\_\+\+Id\+\_\+t vm\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves the current state of a VM. \end{DoxyCompactList}\item 
+VM\+\_\+\+Id\+\_\+t \mbox{\hyperlink{services_8cpp_a7300bce965e3abf8f1598fdfbeebbdbd}{get\+Current\+VMID}} (void)
+\begin{DoxyCompactList}\small\item\em Gets the ID of the currently running VM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{services_8cpp_abb452686968e48b67397da5f97445f5b}\label{services_8cpp_abb452686968e48b67397da5f97445f5b} 
+\index{services.cpp@{services.cpp}!bool@{bool}}
+\index{bool@{bool}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{bool}{bool}}
+{\footnotesize\ttfamily \#define bool~int}
+
+\Hypertarget{services_8cpp_a65e9886d74aaee76545e83dd09011727}\label{services_8cpp_a65e9886d74aaee76545e83dd09011727} 
+\index{services.cpp@{services.cpp}!false@{false}}
+\index{false@{false}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{false}{false}}
+{\footnotesize\ttfamily \#define false~0}
+
+\Hypertarget{services_8cpp_a41f9c5fb8b08eb5dc3edce4dcb37fee7}\label{services_8cpp_a41f9c5fb8b08eb5dc3edce4dcb37fee7} 
+\index{services.cpp@{services.cpp}!true@{true}}
+\index{true@{true}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{true}{true}}
+{\footnotesize\ttfamily \#define true~1}
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{services_8cpp_a7300bce965e3abf8f1598fdfbeebbdbd}\label{services_8cpp_a7300bce965e3abf8f1598fdfbeebbdbd} 
+\index{services.cpp@{services.cpp}!getCurrentVMID@{getCurrentVMID}}
+\index{getCurrentVMID@{getCurrentVMID}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{getCurrentVMID()}{getCurrentVMID()}}
+{\footnotesize\ttfamily VM\+\_\+\+Id\+\_\+t get\+Current\+VMID (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the ID of the currently running VM. 
+
+\begin{DoxyReturn}{Returns}
+VM ID of the currently executing VM, or invalid value if the system is not initialized 
+\end{DoxyReturn}
+\Hypertarget{services_8cpp_a861f2518676e6e5ad2e3ba5b01a01b68}\label{services_8cpp_a861f2518676e6e5ad2e3ba5b01a01b68} 
+\index{services.cpp@{services.cpp}!getVMStatus@{getVMStatus}}
+\index{getVMStatus@{getVMStatus}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{getVMStatus()}{getVMStatus()}}
+{\footnotesize\ttfamily Vcore\+State\+Type get\+VMStatus (\begin{DoxyParamCaption}\item[{VM\+\_\+\+Id\+\_\+t}]{vm\+Id }\end{DoxyParamCaption})}
+
+
+
+Retrieves the current state of a VM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+Id} & Virtual machine ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Current state of the VM, or INVALID state if input is incorrect 
+\end{DoxyReturn}
+\Hypertarget{services_8cpp_a40e566a02605858e48a7a9f67fdea395}\label{services_8cpp_a40e566a02605858e48a7a9f67fdea395} 
+\index{services.cpp@{services.cpp}!resetVM@{resetVM}}
+\index{resetVM@{resetVM}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{resetVM()}{resetVM()}}
+{\footnotesize\ttfamily int reset\+VM (\begin{DoxyParamCaption}\item[{VM\+\_\+\+Id\+\_\+t}]{vm\+Id }\end{DoxyParamCaption})}
+
+
+
+Resets a virtual machine. 
+
+Stops the VM if it is running, reinitializes its execution context (stack, registers, etc.), and sets it back to READY state so it can be scheduled again.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+Id} & Virtual machine ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if VM reset successfully, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{services_8cpp_ae8cc8d525b60b319f53b342153757cd0}\label{services_8cpp_ae8cc8d525b60b319f53b342153757cd0} 
+\index{services.cpp@{services.cpp}!startVM@{startVM}}
+\index{startVM@{startVM}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{startVM()}{startVM()}}
+{\footnotesize\ttfamily int start\+VM (\begin{DoxyParamCaption}\item[{VM\+\_\+\+Id\+\_\+t}]{vm\+Id }\end{DoxyParamCaption})}
+
+
+
+Starts execution of a VM selected by the scheduler. 
+
+This function is called after the scheduler selects a VM that is in READY state. It updates the currently running VM in the hypervisor control block and performs the low-\/level context switch to transfer execution to that VM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+Id} & Virtual machine ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the VM was started successfully, false otherwise 
+\end{DoxyReturn}
+\Hypertarget{services_8cpp_a59180dafd95bfe9f0c15f2ab5c5f1f4e}\label{services_8cpp_a59180dafd95bfe9f0c15f2ab5c5f1f4e} 
+\index{services.cpp@{services.cpp}!stopVM@{stopVM}}
+\index{stopVM@{stopVM}!services.cpp@{services.cpp}}
+\doxysubsubsection{\texorpdfstring{stopVM()}{stopVM()}}
+{\footnotesize\ttfamily int stop\+VM (\begin{DoxyParamCaption}\item[{VM\+\_\+\+Id\+\_\+t}]{vm\+Id }\end{DoxyParamCaption})}
+
+
+
+Stops a virtual machine. 
+
+Marks the VM as STOPPED so it is no longer eligible for scheduling. If the VM is currently running, the scheduler is triggered to switch execution to another VM.
+
+
+\begin{DoxyParams}{Parameters}
+{\em vm\+Id} & Virtual machine ID \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if VM stopped successfully, false otherwise 
+\end{DoxyReturn}
