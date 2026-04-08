@@ -7,7 +7,7 @@
 #define true 	1
 #define bool 	int
 
-/**
+/*
  * @brief Starts execution of a VM selected by the scheduler
  *
  * This function is called after the scheduler selects a VM
